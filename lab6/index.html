@@ -26,7 +26,20 @@
         right: 5%;
         bottom: 20px;
       }
-
+    
+    .esri-view-root {
+      background-color:darkslategrey;
+    }
+    .esri-legend {
+        color: #d1570a;
+        background-color: lightgray;
+        max-width: 15vw;
+    }
+    .esri-widget__heading {
+        color: #d1570a;
+        width: 70%;
+        margin: 0 0 0.5rem 0;
+    }
     </style>
     <script>
     require([
@@ -112,7 +125,7 @@
           });
 
     const legend = new Legend({
-            view: view
+            view: view,
           });
 
     view.ui.add(legend, "top-right"); //you can position the legend here
