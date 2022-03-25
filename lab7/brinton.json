@@ -1,0 +1,740 @@
+{
+    "Masonic Opera House: What Cheer, IA": {
+        "name": "Masonic Opera House: What Cheer, IA",
+        "latitude": "41.401397",
+        "longitude": "-92.354629",
+        "time": "11/5/1904"
+    },
+    "Montezuma Opera House: Montezuma, IA": {
+        "name": "Montezuma Opera House: Montezuma, IA",
+        "latitude": "41.584878",
+        "longitude": "-92.527431",
+        "time": "11/3/1904"
+    },
+    "North English, IA": {
+        "name": "North English, IA",
+        "latitude": "41.513898",
+        "longitude": "-92.076289",
+        "time": "1/7/1904"
+    },
+    "Trojan Opera House: Williamsburg, IA": {
+        "name": "Trojan Opera House: Williamsburg, IA",
+        "latitude": "41.661228",
+        "longitude": "-92.009506",
+        "time": "11/19/1904"
+    },
+    "The Gedney: Independence, IA": {
+        "name": "The Gedney: Independence, IA",
+        "latitude": "42.470465",
+        "longitude": "-91.892778",
+        "time": "1/13/1904"
+    },
+    "Monticello Opera House: Monticello, IA": {
+        "name": "Monticello Opera House: Monticello, IA",
+        "latitude": "42.238275",
+        "longitude": "-91.186943",
+        "time": "1/15/1904"
+    },
+    "Cascade Opera House: Cascade, IA": {
+        "name": "Cascade Opera House: Cascade, IA",
+        "latitude": "42.298488",
+        "longitude": "-91.014223",
+        "time": "12/6/1904"
+    },
+    "Mount Pleasant, IA": {
+        "name": "Mount Pleasant, IA",
+        "latitude": "40.963695",
+        "longitude": "-91.558073",
+        "time": "9/23/1904"
+    },
+    "Central Opera House: Manchester, IA": {
+        "name": "Central Opera House: Manchester, IA",
+        "latitude": "42.484154",
+        "longitude": "-91.455425",
+        "time": "12/3/1904"
+    },
+    "Odeon Theatre: Marshalltown, IA": {
+        "name": "Odeon Theatre: Marshalltown, IA",
+        "latitude": "42.044255",
+        "longitude": "-92.912339",
+        "time": "1/27/1904"
+    },
+    "Coldren Opera House: Iowa City, IA": {
+        "name": "Coldren Opera House: Iowa City, IA",
+        "latitude": "41.661256",
+        "longitude": "-91.529911",
+        "time": "1/31/1904"
+    },
+    "Macomber Opera House: West Branch, IA": {
+        "name": "Macomber Opera House: West Branch, IA",
+        "latitude": "41.672074",
+        "longitude": "-91.345973",
+        "time": "2/3/1904"
+    },
+    "Tipton Opera House: Tipton, IA": {
+        "name": "Tipton Opera House: Tipton, IA",
+        "latitude": "41.769743",
+        "longitude": "-91.127935",
+        "time": "2/6/1904"
+    },
+    "Grand Opera House: Anamosa, IA": {
+        "name": "Grand Opera House: Anamosa, IA",
+        "latitude": "42.108337",
+        "longitude": "-91.285159",
+        "time": "2/10/1904"
+    },
+    "Metropolitan Opera House: Owatonna, MN": {
+        "name": "Metropolitan Opera House: Owatonna, MN",
+        "latitude": "44.083994",
+        "longitude": "-93.226108",
+        "time": "3/22/1904"
+    },
+    "Grand Opera House: Faribault, MN": {
+        "name": "Grand Opera House: Faribault, MN",
+        "latitude": "44.296188",
+        "longitude": "-93.29026",
+        "time": "3/23/1904"
+    },
+    "Ward Opera House: Waseca, MN": {
+        "name": "Ward Opera House: Waseca, MN",
+        "latitude": "44.017224",
+        "longitude": "-93.588572",
+        "time": "3/21/1904"
+    },
+    "Waterville, MN": {
+        "name": "Waterville, MN",
+        "latitude": "44.218991",
+        "longitude": "-93.56797",
+        "time": "3/28/1904"
+    },
+    "Turner Opera House: New Ulm, MN": {
+        "name": "Turner Opera House: New Ulm, MN",
+        "latitude": "44.28212",
+        "longitude": "-94.451855",
+        "time": "2/27/1904"
+    },
+    "Rost's Hall: Saint Peter, MN": {
+        "name": "Rost's Hall: Saint Peter, MN",
+        "latitude": "44.323838",
+        "longitude": "-93.958529",
+        "time": "3/30/1904"
+    },
+    "Rochester, MN": {
+        "name": "Rochester, MN",
+        "latitude": "44.023327",
+        "longitude": "-92.463021",
+        "time": "3/19/1904"
+    },
+    "Saint Charles, MN": {
+        "name": "Saint Charles, MN",
+        "latitude": "43.969361",
+        "longitude": "-92.065982",
+        "time": "3/9/1904"
+    },
+    "Winona, MN": {
+        "name": "Winona, MN",
+        "latitude": "44.050005",
+        "longitude": "-91.639229",
+        "time": "3/18/1904"
+    },
+    "Chatfield, MN": {
+        "name": "Chatfield, MN",
+        "latitude": "43.84463",
+        "longitude": "-92.188091",
+        "time": "3/17/1904"
+    },
+    "Mankato Theatre: Mankato, MN": {
+        "name": "Mankato Theatre: Mankato, MN",
+        "latitude": "44.163466",
+        "longitude": "-93.99935",
+        "time": "3/26/1904"
+    },
+    "G.A.R. Hall: Wells, MN": {
+        "name": "G.A.R. Hall: Wells, MN",
+        "latitude": "43.746066",
+        "longitude": "-93.728836",
+        "time": "4/2/1904"
+    },
+    "Hildreth Opera House: Charles City, IA": {
+        "name": "Hildreth Opera House: Charles City, IA",
+        "latitude": "43.066361",
+        "longitude": "-92.672411",
+        "time": "4/6/1904"
+    },
+    "Waverly Opera House: Waverly, IA": {
+        "name": "Waverly Opera House: Waverly, IA",
+        "latitude": "42.725814",
+        "longitude": "-92.475463",
+        "time": "4/9/1904"
+    },
+    "Harriman Opera House: Hampton, IA": {
+        "name": "Harriman Opera House: Hampton, IA",
+        "latitude": "42.742009",
+        "longitude": "-93.202273",
+        "time": "4/13/1904"
+    },
+    "Town Hall: Sheffield, IA": {
+        "name": "Town Hall: Sheffield, IA",
+        "latitude": "42.893517",
+        "longitude": "-93.215192",
+        "time": "4/16/1904"
+    },
+    "Chapin, IA": {
+        "name": "Chapin, IA",
+        "latitude": "42.833581",
+        "longitude": "-93.222146",
+        "time": "4/15/1904"
+    },
+    "Eagle Grove Opera House: Eagle Grove, IA": {
+        "name": "Eagle Grove Opera House: Eagle Grove, IA",
+        "latitude": "42.664138",
+        "longitude": "-93.90439",
+        "time": "4/20/1904"
+    },
+    "Brown Opera House: Clarion, IA": {
+        "name": "Brown Opera House: Clarion, IA",
+        "latitude": "42.731339",
+        "longitude": "-93.732208",
+        "time": "4/23/1904"
+    },
+    "Wilson Opera House: Mason City, IA": {
+        "name": "Wilson Opera House: Mason City, IA",
+        "latitude": "43.153573",
+        "longitude": "-93.201037",
+        "time": "4/27/1904"
+    },
+    "Graham Opera House: Washington, IA": {
+        "name": "Graham Opera House: Washington, IA",
+        "latitude": "41.316008",
+        "longitude": "-91.734033",
+        "time": "12/31/1904"
+    },
+    "Ainsworth Opera House: Ainsworth, IA": {
+        "name": "Ainsworth Opera House: Ainsworth, IA",
+        "latitude": "41.28891",
+        "longitude": "-91.552384",
+        "time": "5/21/1904"
+    },
+    "Wayland, IA": {
+        "name": "Wayland, IA",
+        "latitude": "41.147783",
+        "longitude": "-91.661307",
+        "time": "8/13/1904"
+    },
+    "Kalona Opera House: Kalona, IA": {
+        "name": "Kalona Opera House: Kalona, IA",
+        "latitude": "41.483072",
+        "longitude": "-91.706002",
+        "time": "11/10/1904"
+    },
+    "Crawfordsville Town Hall: Crawfordsville, IA": {
+        "name": "Crawfordsville Town Hall: Crawfordsville, IA",
+        "latitude": "41.215386",
+        "longitude": "-91.538751",
+        "time": "7/23/1904"
+    },
+    "Wellman, IA": {
+        "name": "Wellman, IA",
+        "latitude": "41.465065",
+        "longitude": "-91.837854",
+        "time": "11/11/1904"
+    },
+    "Poor Farm Near Washington: Washington, IA": {
+        "name": "Poor Farm Near Washington: Washington, IA",
+        "latitude": "41.316008",
+        "longitude": "-91.734033",
+        "time": "7/2/1904"
+    },
+    "Baldwin's Hall: Hedrick, IA": {
+        "name": "Baldwin's Hall: Hedrick, IA",
+        "latitude": "41.172513",
+        "longitude": "-92.308794",
+        "time": "7/4/1904"
+    },
+    "River Park: Brighton, IA": {
+        "name": "River Park: Brighton, IA",
+        "latitude": "41.174739",
+        "longitude": "-91.819615",
+        "time": "8/6/1904"
+    },
+    "Baptist Church: West Chester, IA": {
+        "name": "Baptist Church: West Chester, IA",
+        "latitude": "41.338904",
+        "longitude": "-91.817671",
+        "time": "7/30/1904"
+    },
+    "Keota, IA": {
+        "name": "Keota, IA",
+        "latitude": "41.363902",
+        "longitude": "-91.953786",
+        "time": "9/13/1904"
+    },
+    "Sigourney, IA": {
+        "name": "Sigourney, IA",
+        "latitude": "41.333046",
+        "longitude": "-92.20484",
+        "time": "9/14/1904"
+    },
+    "Hendrick, IA": {
+        "name": "Hendrick, IA",
+        "latitude": "41.17448",
+        "longitude": "-92.308461",
+        "time": "9/15/1904"
+    },
+    "Richland, IA": {
+        "name": "Richland, IA",
+        "latitude": "41.185571",
+        "longitude": "-91.992953",
+        "time": "9/16/1904"
+    },
+    "Brighton, IA": {
+        "name": "Brighton, IA",
+        "latitude": "41.174739",
+        "longitude": "-91.819615",
+        "time": "9/17/1904"
+    },
+    "Richland Church: Richland, IA": {
+        "name": "Richland Church: Richland, IA",
+        "latitude": "41.185571",
+        "longitude": "-91.992953",
+        "time": "10/20/1904"
+    },
+    "Alexander Hall: Martinsburg, IA": {
+        "name": "Alexander Hall: Martinsburg, IA",
+        "latitude": "41.178903",
+        "longitude": "-92.251849",
+        "time": "10/21/1904"
+    },
+    "LaToska Opera House: Ollie, IA": {
+        "name": "LaToska Opera House: Ollie, IA",
+        "latitude": "41.198372",
+        "longitude": "-92.093089",
+        "time": "10/22/1904"
+    },
+    "Fremont, IA": {
+        "name": "Fremont, IA",
+        "latitude": "40.734594",
+        "longitude": "-95.592478",
+        "time": "10/26/1904"
+    },
+    "Opera House: Eddyville, IA": {
+        "name": "Opera House: Eddyville, IA",
+        "latitude": "41.157248",
+        "longitude": "-92.634372",
+        "time": "10/29/1904"
+    },
+    "United Methodist Church: Grinnell, IA": {
+        "name": "United Methodist Church: Grinnell, IA",
+        "latitude": "41.743055",
+        "longitude": "-92.722421",
+        "time": "11/2/1904"
+    },
+    "Webster, IA": {
+        "name": "Webster, IA",
+        "latitude": "41.438889",
+        "longitude": "-92.171841",
+        "time": "11/14/1904"
+    },
+    "Keswick, IA": {
+        "name": "Keswick, IA",
+        "latitude": "41.452508",
+        "longitude": "-92.239348",
+        "time": "12/16/1904"
+    },
+    "Christian Church: North English, IA": {
+        "name": "Christian Church: North English, IA",
+        "latitude": "41.513898",
+        "longitude": "-92.076289",
+        "time": "12/17/1904"
+    },
+    "Brian Opera House: Blairstown, IA": {
+        "name": "Brian Opera House: Blairstown, IA",
+        "latitude": "41.907089",
+        "longitude": "-92.083342",
+        "time": "11/22/1904"
+    },
+    "Norway Opera House: Norway, IA": {
+        "name": "Norway Opera House: Norway, IA",
+        "latitude": "41.902781",
+        "longitude": "-91.921569",
+        "time": "11/26/1904"
+    },
+    "Central City, IA": {
+        "name": "Central City, IA",
+        "latitude": "42.203883",
+        "longitude": "-91.524056",
+        "time": "11/30/1904"
+    },
+    "Preston Opera House: Grinnell, IA": {
+        "name": "Preston Opera House: Grinnell, IA",
+        "latitude": "41.743055",
+        "longitude": "-92.722421",
+        "time": "12/10/1904"
+    },
+    "Brooklyn Opera House: Brooklyn, IA": {
+        "name": "Brooklyn Opera House: Brooklyn, IA",
+        "latitude": "41.733609",
+        "longitude": "-92.445463",
+        "time": "12/14/1904"
+    },
+    "Malcom, IA": {
+        "name": "Malcom, IA",
+        "latitude": "41.70833",
+        "longitude": "-92.559076",
+        "time": "12/15/1904"
+    },
+    "": {
+        "name": "",
+        "latitude": "41.513898",
+        "longitude": "-92.076289",
+        "time": "12/13/1908"
+    },
+    "Opera House": {
+        "name": "Opera House",
+        "latitude": "41.198372",
+        "longitude": "-92.093089",
+        "time": "12/18/1908"
+    },
+    "Hildreth Opera House": {
+        "name": "Hildreth Opera House",
+        "latitude": "43.066361",
+        "longitude": "-92.672411",
+        "time": "10/26/1906"
+    },
+    "Olympic Opera House": {
+        "name": "Olympic Opera House",
+        "latitude": "42.742009",
+        "longitude": "-93.202273",
+        "time": "11/2/1907"
+    },
+    "Midland Theater": {
+        "name": "Midland Theater",
+        "latitude": "42.497469",
+        "longitude": "-94.168016",
+        "time": "2/1/1905"
+    },
+    "Gedney Hotel": {
+        "name": "Gedney Hotel",
+        "latitude": "42.468598",
+        "longitude": "-91.889339",
+        "time": "2/4/1905"
+    },
+    "Oden Opera House": {
+        "name": "Oden Opera House",
+        "latitude": "42.044255",
+        "longitude": "-92.912339",
+        "time": "2/8/1905"
+    },
+    "Arie Opera House": {
+        "name": "Arie Opera House",
+        "latitude": "42.059705",
+        "longitude": "-93.880227",
+        "time": "10/24/1907"
+    },
+    "Palace Music Hall": {
+        "name": "Palace Music Hall",
+        "latitude": "43.668093",
+        "longitude": "-92.97449",
+        "time": "10/6/1906"
+    },
+    "Met Opera House": {
+        "name": "Met Opera House",
+        "latitude": "44.083994",
+        "longitude": "-93.226108",
+        "time": "3/18/1905"
+    },
+    "Insane Asylum": {
+        "name": "Insane Asylum",
+        "latitude": "44.023327",
+        "longitude": "-92.463021",
+        "time": "3/11/1905"
+    },
+    "[Ware Auditorium]": {
+        "name": "[Ware Auditorium]",
+        "latitude": "44.458204",
+        "longitude": "-93.161159",
+        "time": "3/25/1905"
+    },
+    "Broadway Theater": {
+        "name": "Broadway Theater",
+        "latitude": "43.648013",
+        "longitude": "-93.368266",
+        "time": "3/29/1905"
+    },
+    "Auditorium": {
+        "name": "Auditorium",
+        "latitude": "44.218991",
+        "longitude": "-93.56797",
+        "time": "4/1/1905"
+    },
+    "Wisner Opera House": {
+        "name": "Wisner Opera House",
+        "latitude": "42.360816",
+        "longitude": "-93.099646",
+        "time": "4/22/1905"
+    },
+    "Gedney Opera House": {
+        "name": "Gedney Opera House",
+        "latitude": "42.468598",
+        "longitude": "-91.889339",
+        "time": "12/4/1907"
+    },
+    "Methodist Church Tent": {
+        "name": "Methodist Church Tent",
+        "latitude": "41.316008",
+        "longitude": "-91.734033",
+        "time": "6/22/1905"
+    },
+    "Tent": {
+        "name": "Tent",
+        "latitude": "41.338904",
+        "longitude": "-91.817671",
+        "time": "9/23/1907"
+    },
+    "Colonial Theatre": {
+        "name": "Colonial Theatre",
+        "latitude": "41.743611",
+        "longitude": "-92.724722",
+        "time": "8/30/1906"
+    },
+    "Odeon Theatre": {
+        "name": "Odeon Theatre",
+        "latitude": "42.044255",
+        "longitude": "-92.912339",
+        "time": "9/1/1906"
+    },
+    "Armory Hall": {
+        "name": "Armory Hall",
+        "latitude": "42.466307",
+        "longitude": "-93.825247",
+        "time": "10/14/1905"
+    },
+    "Temple Grand Theatre": {
+        "name": "Temple Grand Theatre",
+        "latitude": "41.0586",
+        "longitude": "-94.361347",
+        "time": "2/3/1908"
+    },
+    "McComb Opera House": {
+        "name": "McComb Opera House",
+        "latitude": "40.765553",
+        "longitude": "-95.37221",
+        "time": "11/27/1905"
+    },
+    "[Armory Evans O.H.]": {
+        "name": "[Armory Evans O.H.]",
+        "latitude": "41.009519",
+        "longitude": "-95.228247",
+        "time": "11/23/1905"
+    },
+    "Evans Theatre": {
+        "name": "Evans Theatre",
+        "latitude": "41.009519",
+        "longitude": "-95.228247",
+        "time": "11/25/1905"
+    },
+    "Overland Theatre": {
+        "name": "Overland Theatre",
+        "latitude": "40.676526",
+        "longitude": "-95.858694",
+        "time": "2/13/1908"
+    },
+    "Hahn Opera House": {
+        "name": "Hahn Opera House",
+        "latitude": "40.367405",
+        "longitude": "-96.194995",
+        "time": "12/2/1905"
+    },
+    "Steele's Opera House": {
+        "name": "Steele's Opera House",
+        "latitude": "40.137225",
+        "longitude": "-97.180591",
+        "time": "12/8/1905"
+    },
+    "New Opera House": {
+        "name": "New Opera House",
+        "latitude": "40.481516",
+        "longitude": "-96.960259",
+        "time": "12/23/1905"
+    },
+    "Paddock Opera House": {
+        "name": "Paddock Opera House",
+        "latitude": "40.266429",
+        "longitude": "-96.747369",
+        "time": "11/27/1906"
+    },
+    "Bowersock  Opera House": {
+        "name": "Bowersock  Opera House",
+        "latitude": "38.971938",
+        "longitude": "-95.23595",
+        "time": "1/4/1906"
+    },
+    "Midland Theatre": {
+        "name": "Midland Theatre",
+        "latitude": "38.194467",
+        "longitude": "-95.742764",
+        "time": "1/17/1906"
+    },
+    "Apollo Opera House": {
+        "name": "Apollo Opera House",
+        "latitude": "37.881147",
+        "longitude": "-95.733317",
+        "time": "1/20/1906"
+    },
+    "Williams Opera House": {
+        "name": "Williams Opera House",
+        "latitude": "37.679214",
+        "longitude": "-95.457203",
+        "time": "1/29/1906"
+    },
+    "Grand Opera House": {
+        "name": "Grand Opera House",
+        "latitude": "37.239749",
+        "longitude": "-96.995592",
+        "time": "12/21/1906"
+    },
+    "5th Ave Theatre": {
+        "name": "5th Ave Theatre",
+        "latitude": "37.062051",
+        "longitude": "-97.038575",
+        "time": "12/29/1906"
+    },
+    "Baud Aud.": {
+        "name": "Baud Aud.",
+        "latitude": "37.224236",
+        "longitude": "-95.708313",
+        "time": "2/8/1906"
+    },
+    "Aud. Theatre": {
+        "name": "Aud. Theatre",
+        "latitude": "37.0373",
+        "longitude": "-95.626389",
+        "time": "3/7/1906"
+    },
+    "Home Theatre": {
+        "name": "Home Theatre",
+        "latitude": "38.060844",
+        "longitude": "-97.929774",
+        "time": "12/17/1906"
+    },
+    "Ragsdale Opera House": {
+        "name": "Ragsdale Opera House",
+        "latitude": "38.046917",
+        "longitude": "-97.344724",
+        "time": "3/21/1906"
+    },
+    "Wareham Opera House": {
+        "name": "Wareham Opera House",
+        "latitude": "39.183608",
+        "longitude": "-96.571669",
+        "time": "3/31/1906"
+    },
+    "Grand Theatre": {
+        "name": "Grand Theatre",
+        "latitude": "39.84173",
+        "longitude": "-96.648064",
+        "time": "4/2/1906"
+    },
+    "High Street Theatre": {
+        "name": "High Street Theatre",
+        "latitude": "39.660557",
+        "longitude": "-95.526369",
+        "time": "4/7/1906"
+    },
+    "Luella Grand Theatre": {
+        "name": "Luella Grand Theatre",
+        "latitude": "39.795295",
+        "longitude": "-93.552436",
+        "time": "4/18/1906"
+    },
+    "Hubbell Theatre": {
+        "name": "Hubbell Theatre",
+        "latitude": "40.078902",
+        "longitude": "-93.616607",
+        "time": "4/21/1906"
+    },
+    "Visiting Opera House": {
+        "name": "Visiting Opera House",
+        "latitude": "42.833581",
+        "longitude": "-93.222146",
+        "time": "5/22/1906"
+    },
+    "Broadway Theatre": {
+        "name": "Broadway Theatre",
+        "latitude": "43.648013",
+        "longitude": "-93.368266",
+        "time": "11/14/1907"
+    },
+    "Palace M.H [Movie House]": {
+        "name": "Palace M.H [Movie House]",
+        "latitude": "43.668093",
+        "longitude": "-92.97449",
+        "time": "5/24/1906"
+    },
+    "[Med.] Opera House": {
+        "name": "[Med.] Opera House",
+        "latitude": "44.023327",
+        "longitude": "-92.463021",
+        "time": "5/25/1906"
+    },
+    "Oden Theatre": {
+        "name": "Oden Theatre",
+        "latitude": "42.044255",
+        "longitude": "-92.912339",
+        "time": "8/31/1906"
+    },
+    "Greene's Opera House": {
+        "name": "Greene's Opera House",
+        "latitude": "41.975887",
+        "longitude": "-91.670405",
+        "time": "9/23/1906"
+    },
+    "Met. Opera House": {
+        "name": "Met. Opera House",
+        "latitude": "44.083994",
+        "longitude": "-93.226108",
+        "time": "11/15/1907"
+    },
+    "Wilson Theatre": {
+        "name": "Wilson Theatre",
+        "latitude": "43.153573",
+        "longitude": "-93.201037",
+        "time": "11/1/1906"
+    },
+    "Armory Opera House": {
+        "name": "Armory Opera House",
+        "latitude": "42.466307",
+        "longitude": "-93.825247",
+        "time": "10/26/1907"
+    },
+    "Band Aud.": {
+        "name": "Band Aud.",
+        "latitude": "37.224236",
+        "longitude": "-95.708313",
+        "time": "12/25/1906"
+    },
+    "Masonic Hall": {
+        "name": "Masonic Hall",
+        "latitude": "30.88438",
+        "longitude": "-96.597194",
+        "time": "2/20/1907"
+    },
+    "Church": {
+        "name": "Church",
+        "latitude": "41.328077",
+        "longitude": "-91.536828",
+        "time": "6/22/1907"
+    },
+    "A. Opera House": {
+        "name": "A. Opera House",
+        "latitude": "41.584722",
+        "longitude": "-92.525278",
+        "time": "10/18/1907"
+    },
+    "[Aldreth] Opera House": {
+        "name": "[Aldreth] Opera House",
+        "latitude": "43.066361",
+        "longitude": "-92.672411",
+        "time": "11/30/1907"
+    }
+}
