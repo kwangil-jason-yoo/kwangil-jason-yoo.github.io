@@ -151,8 +151,11 @@ attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a hre
                     $(".temporal-legend").text("Population in "+labels[i]); // updates label for the timestamp
                 })
                 .mousedown(function() {
-                map.dragging.enable();
+                map.dragging.disable();
                 })
+                .mouseup(function() {
+                map.dragging.enable();
+                })                                     
             return slider;
           }
           sliderControl.addTo(map);
