@@ -1,0 +1,50 @@
+<!DOCTYPE html> 
+<html> 
+   <head> 
+    <title>Lab 8_part2_Yoo| D3</title> 
+    <style>
+    </style>
+    <script src="https://d3js.org/d3.v5.min.js" charset="utf-8"></script>
+    <script src="https://yooki1117.github.io/lab8/Europe.geojson"></script>
+    <script src="https://yooki1117.github.io/lab8/Europe_cartogram.geojson"></script>
+   </head> 
+    <body>
+        <div id="main_title"><h1>COVID-19 Cases in Europe in Cartogram</h1></div>
+        <script>
+            var width = window.innerWidth; 
+            var height = window.innerHeight;
+            
+            
+            var svg = d3.select("body")
+            .append("svg") 
+            .attr("width", width )
+            .attr("height", height );
+            
+            var g = svg.append( "g" );
+            
+            var albersProjection = d3.geoAlbers() 
+                .scale( 2850000 ) 
+                .rotate( [96.6327,0] ) 
+                .center( [0, 40.8497493] )    
+                .translate( [width/2,height/2] ); 
+            var geoPath = d3.geoPath() 
+                .projection( albersProjection );
+            
+            g.selectAll( "path" )
+                .data( europe_crt.features ) 
+                .enter() 
+                .append( "path" ) 
+                .attr( "fill", "#ccc" ) 
+                .attr( "stroke", "#333") 
+            
+            var lnk_json = svg.append( "g" ); 
+            lnk_json.selectAll( "path" ) 
+                .data( europe_crt.features ) 
+                .enter() 
+                .append( "path" ) 
+                .attr( "fill", function(g) {return ramp(d.properties.sovereignt)}) 
+                .attr( "stroke", "#999" ) 
+            
+        </script>
+    </body>
+</html>
