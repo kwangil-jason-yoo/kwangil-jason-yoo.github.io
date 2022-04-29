@@ -1,0 +1,299 @@
+<html>
+  <head>
+    <title>Final_Yoo</title>
+      
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://skeate.dev/Leaflet.timeline/examples/leaflet.timeline.js"></script>
+    <script src="https://yooki1117.github.io/final/simple_data.geojson"></script>
+    <script src="https://yooki1117.github.io/final/simple_Pnt.geojson"></script>
+      
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      #title {
+        float:right;
+        font-size: 25px;
+        font-weight: 1000;
+        background-color: #d00000;
+        color: #f5f1e7;
+        width: 65%;
+        }
+      #st_title {
+        padding-left: 5%;
+        float:left;
+        font-size: 25px;
+        font-weight: 1000;
+        background-color: #d00000;
+        color: #f5f1e7;
+        width: 30%;
+        }
+      #sub_title {
+        text-align: center;
+        font-size: 20px;
+        background-color: #c7c8ca;
+        }
+      #map {
+        width: 100vw;
+        height: 93%;
+      }
+      .leaflet-bottom.leaflet-left {
+        width: 100%;
+      }
+      .leaflet-control-container .leaflet-timeline-controls {
+        box-sizing: border-box;
+        width: 100%;
+        margin: 0;
+        margin-bottom: 25px;
+      }
+      .legend {
+          padding: 6px 8px;
+          line-height: 18px;
+          background: rgba(66,181,136,0.65);
+          box-shadow: 0 0 15px rgba(0,0,0,0.2);
+          border-radius: 5px;
+      }
+        
+       .legend i {
+            width: 15px;
+            height: 15px;
+            float: left;
+            margin-right: 8px;
+            opacity: 0.7;
+        }
+        
+      .legend2 {
+          padding: 6px 8px;
+          line-height: 18px;
+          background: rgba(66,181,136,0.65);
+          box-shadow: 0 0 15px rgba(0,0,0,0.2);
+          border-radius: 5px;
+        }
+        
+       .legend2 i {
+            width: 15px;
+            height: 15px;
+            float: left;
+            margin-right: 8px;
+            opacity: 0.7;
+        }
+        
+      .info {
+            padding: 6px 8px;
+            font: 13px/16px Verdana, Geneva, sans-serif;
+            background: white;
+            background: rgba(255,255,255,0.8);
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            border-radius: 10px;
+            height: 500px;
+        }
+
+      .circle {
+            float: left;
+            border: 1px solid #222;
+            border-radius: 50%;
+        }
+
+     .legend2 .colorcircle {
+            border-radius: 50%;
+            width: 15px;
+            height: 15px;
+            margin-top: 0px;
+        }
+    .legend2 .circlepadding {
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.85);
+        }
+        
+    </style>
+  </head>
+  <body>
+      <div id="st_title">NEW YORK STATE</div>
+      <div id="title">COVID-19 Testing Positive Rates</div>
+      <div id="sub_title">Feb 29 2020 ~ May 30 2020</div>
+      <div id="map"></div>
+
+
+    <script>
+var minValue = 1;
+var minRadius = 4;
+var timeline;
+var timeline2;
+var timelineControl;
+var time;
+var minValue = 100;
+var minRadius = 20;
+        
+        function calcRadius(val) {
+            return 1.0083 * Math.pow(val/minValue,.5716)*minRadius;
+        }
+        
+        var lightGray = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
+            attribution: '',
+            subdomains: 'abcd',
+            minZoom: 0,
+            maxZoom: 20,
+            ext: 'png'
+        });
+        
+        var smoothDark = L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png', {
+            attribution: '',
+            subdomains: 'abcd',
+            minZoom: 0,
+            maxZoom: 20,
+            ext: 'png'
+        });
+        
+        var map = L.map("map", {
+            layers: [lightGray, smoothDark],
+            center: new L.LatLng(43, -75),
+            zoom: 7,
+        });
+        
+
+        function getColorFor(value) {
+            return value <= 3 ? '#fff7ec':
+            value <= 9 ? '#ffffcc':
+            value <= 16 ? '#ffeda0':
+            value <= 23 ? '#fed976':
+            value <= 30 ? '#feb24c':
+            value <= 37 ? '#fd8d3c':
+            value <= 45 ? '#fc4e2a':
+            value <= 53 ? '#e31a1c':
+            value <= 67 ? '#bd0026':
+            value <= 100 ? '#800026':
+            '#f7f7f7';
+        }
+
+        timeline = L.timeline(choropleth, {
+            style: function (data) {
+                return {
+                    color: getColorFor((data.properties.New_Positi/data.properties.Total_Numb)*100),
+                    fillOpacity: 1,
+                };
+            },
+            waitToUpdateMap: true,
+            onEachFeature: function (feature, layer) {
+                layer.bindTooltip('<h3>'+ feature.properties.NAME + '</h3> <p>' + '</strong>Test % Positive: <strong>' + Math.round((feature.properties.New_Positi/feature.properties.Total_Numb)*100) + '% </strong></p>' + 'New Positives: <strong>' + feature.properties.New_Positi + '</strong> <br>Total Number of Tests Performed: <strong>' + feature.properties.Total_Numb + '</strong></p>');
+            },
+        }).addTo(map);
+            
+        
+        
+            var getInterval = function(circle) {
+              return {
+                start: circle.properties.start,
+                end: circle.properties.end,
+              };
+            };
+
+            timeline2 = L.timeline(circle, {
+                getInterval: getInterval,
+                pointToLayer: function (circle, latlng) {
+                    
+                    
+                    if (isNaN((circle.properties.New_Positi/circle.properties.Total_Numb)*100)){
+                        cirSize = 0
+                    } else {
+                        cirSize = ((circle.properties.New_Positi/circle.properties.Total_Numb)*100)
+                    }
+                    console.log(circle.properties.Total_Numb)
+                    console.log(circle.properties.New_Positi)
+                    console.log(cirSize);
+                    var diff = (cirSize);
+                    return L.circleMarker(latlng, {
+                        radius: calcRadius(diff),
+                        color: getColorFor(cirSize),
+                    }).bindPopup('<h3>'+ circle.properties.NAME + '</h3> <p>' + '</strong>Test % Positive: <strong>' + Math.round((circle.properties.New_Positi/circle.properties.Total_Numb)*100) + '% </strong></p>' + 'New Positives: <strong>' + circle.properties.New_Positi + '</strong> <br>Total Number of Tests Performed: <strong>' + circle.properties.Total_Numb + '</strong></p>');
+                },
+            });
+            
+            timelineControl = L.timelineSliderControl({
+                formatOutput: function (date) {
+                    return new Date(date).toLocaleDateString();
+                },
+                duration: 25000,
+                //steps: 1000,
+                enableKeyboardControls: true,
+                showTicks: true,
+
+            });
+        
+	  		var overlays = {
+			"Chropleth Map": timeline,
+            "Bubble Map": timeline2
+            };
+	  
+			var baseMaps = {
+			"Light Gray": lightGray,
+            "Smooth Dark": smoothDark
+			};
+	       
+	  L.control.layers(baseMaps, overlays, {collapsed:false}).addTo(map);
+        
+        map.on("overlayadd", function (eventLayer) {
+            timeline.bringToBack();
+        });
+        map.on("overlayadd", function (eventLayer) {
+            timeline2.bringToBack();
+        });
+        
+            var cirLegend = L.control({position: 'topleft'});
+            cirLegend.onAdd = function (map) {
+              var div = L.DomUtil.create('div', 'info legend2');
+                grades = [9, 16, 23, 30, 37, 45, 53, 67],              
+                labels = ['<b>Positive Rates <br><br></b>'],
+                categories = ['9-16','16-23','23-30','30-37','37-45','45-53','53-67','67-100']; 
+
+                for (var i = 0; i < grades.length; i++) {
+                    var grade = grades[i];
+                    labels.push('<i class="circlepadding" style="width: '+Math.max(8,(7-2.2*calcRadius(grade)))+'px;"></i> <i style="background:' + getColorFor(grades[i] + 1) + 'width: '+calcRadius(grade)*2+'px; height: '+calcRadius(grade)*2+'px; border-radius: 50%; margin-top: '+Math.max(0,(9-calcRadius(grade)))+'px;"></i><i class="circlepadding" style="width: '+Math.max(2,(25-2*calcRadius(grade)))+'px;"></i> ' + categories[i]);
+                }
+                div.innerHTML = labels.join('<br>');
+                return div;
+                      };
+        
+            var legend = L.control({position: 'topleft'});
+            legend.onAdd = function (map) {
+              var div = L.DomUtil.create('div', 'legend'),
+                grades = [9, 16, 23, 30, 37, 45, 53, 67];
+                div.innerHTML = '<b>Positive Rates <br><br></b>';
+                for (var i = 0; i < grades.length; i++) {
+                div.innerHTML +=
+                '<i style="background:' + getColorFor(grades[i] + 1) + '"></i>' +
+                  grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] +   '<br><br>' : '+');
+                          }
+                          return div;
+                      };
+
+                    legend.addTo(map);
+        
+                    map.on('overlayremove', function(eventLayer){
+                      if (eventLayer.name == 'Chropleth Map'){
+                        map.removeControl(legend);
+                      }
+                      if (eventLayer.name == 'Bubble Map'){
+                        map.removeControl(cirLegend);
+                      }
+                    });
+                    map.on('overlayadd', function(eventLayer){
+                      if (eventLayer.name == 'Chropleth Map'){
+                        legend.addTo(map);
+                      }
+                      if (eventLayer.name == 'Bubble Map'){
+                        cirLegend.addTo(map);
+                      }
+                    });
+        
+
+            
+            timelineControl.addTo(map);
+            timelineControl.addTimelines(timeline);
+            timelineControl.addTimelines(timeline2);
+      
+    </script>
+  </body>
+</html>

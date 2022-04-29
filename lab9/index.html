@@ -139,14 +139,14 @@ var uniqueValueInfos = [
         }
     });
     var building_lyrs = new FeatureLayer({
-        url: "https://maps.facilities.uiowa.edu/arcgis/rest/services/Features/BuildingLabels/MapServer"
+        url: "https://maps.facilities.uiowa.edu/arcgis/rest/services/Features/BuildingLabels/MapServer/0"
     });
     
     var buildings = new FeatureLayer({
-        url: "https://maps.facilities.uiowa.edu/arcgis/rest/services/Features/Buildings/MapServer"
+        url: "https://maps.facilities.uiowa.edu/arcgis/rest/services/Features/Buildings/MapServer/0"
     });
     console.log(vegetationLayer);
-    console.log(buildings);
+    console.log("buildings", buildings);
     map.addMany([
         building_lyrs,
         buildings,
