@@ -15,12 +15,15 @@
         padding: 0;
       }
       #title {
-        float:right;
+        background-color: #d00000;
+        width: 100%;
+        }
+      #main_title {
+        padding-right: 40%;
+        color: #f5f1e7;
+        text-align: right;
         font-size: 25px;
         font-weight: 1000;
-        background-color: #d00000;
-        color: #f5f1e7;
-        width: 65%;
         }
       #st_title {
         padding-left: 5%;
@@ -29,11 +32,11 @@
         font-weight: 1000;
         background-color: #d00000;
         color: #f5f1e7;
-        width: 30%;
         }
       #sub_title {
         text-align: center;
         font-size: 20px;
+        font-weight: 1000;
         background-color: #c7c8ca;
         }
       #map {
@@ -77,12 +80,9 @@
           background: rgba(66,181,136,0.65);
           box-shadow: 0 0 15px rgba(0,0,0,0.2);
           border-radius: 15px;
-          height: 390px;
         }
         
        .legend2 i {
-            width: 15px;
-            height: 15px;
             float: left;
             margin-right: 8px;
             opacity: 0.7;
@@ -93,23 +93,15 @@
             border: 1px solid #222;
             border-radius: 50%;
         }
-
-     .legend2 .colorcircle {
-            border-radius: 50%;
-            width: 15px;
-            height: 15px;
-            margin-top: 0px;
-        }
-    .legend2 .circlepadding {
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.85);
-        }
         
     </style>
   </head>
   <body>
-      <div id="st_title">NEW YORK STATE</div>
-      <div id="title">COVID-19 Testing Positive Rates</div>
+      
+      <div id="title">
+          <div id="st_title">NEW YORK STATE</div>
+          <div id="main_title">COVID-19 Testing Positive Rates</div>
+      </div>
       <div id="sub_title">Feb 29 2020 ~ May 30 2020</div>
       <div id="map"></div>
 
@@ -121,6 +113,7 @@ var timeline;
 var timeline2;
 var timelineControl;
 var time;
+var diff;
 var minValue = 100;
 var minRadius = 20;
         
@@ -152,16 +145,16 @@ var minRadius = 20;
         
 
         function getColorFor(value) {
-            return value <= 3 ? '#fff7ec':
-            value <= 9 ? '#ffffcc':
-            value <= 16 ? '#ffeda0':
-            value <= 23 ? '#fed976':
-            value <= 30 ? '#feb24c':
-            value <= 37 ? '#fd8d3c':
-            value <= 45 ? '#fc4e2a':
-            value <= 53 ? '#e31a1c':
-            value <= 67 ? '#bd0026':
-            value <= 100 ? '#800026':
+            return value <= 3 ? '#fcffa4':
+            value <= 9 ? '#f6d746':
+            value <= 16 ? '#fca50a':
+            value <= 23 ? '#f37819':
+            value <= 30 ? '#dd513a':
+            value <= 37 ? '#bc3754':
+            value <= 45 ? '#932667':
+            value <= 53 ? '#6a176e':
+            value <= 67 ? '#420a68':
+            value <= 100 ? '#160b39':
             '#f7f7f7';
         }
 
@@ -197,10 +190,7 @@ var minRadius = 20;
                     } else {
                         cirSize = ((circle.properties.New_Positi/circle.properties.Total_Numb)*100)
                     }
-                    console.log(circle.properties.Total_Numb)
-                    console.log(circle.properties.New_Positi)
-                    console.log(cirSize);
-                    var diff = (cirSize);
+                    diff = (cirSize);
                     return L.circleMarker(latlng, {
                         radius: calcRadius(diff),
                         color: getColorFor(cirSize),
@@ -229,7 +219,7 @@ var minRadius = 20;
             "Dark": smoothDark
 			};
 	       
-	  L.control.layers(baseMaps, overlays, {collapsed:false}).addTo(map);
+	  L.control.layers(overlays , baseMaps, {collapsed:false}).addTo(map);
         
         map.on("overlayadd", function (eventLayer) {
             timeline.bringToBack();
@@ -240,14 +230,12 @@ var minRadius = 20;
         
             var cirLegend = L.control({position: 'topleft'});
             cirLegend.onAdd = function (map) {
-              var div = L.DomUtil.create('div', 'info legend2');
+              var div = L.DomUtil.create('div', 'legend2'),
                 grades = [9, 16, 23, 30, 37, 45, 53, 67],              
-                labels = ['<b>Positive Rates <br><br></b>'],
-                categories = ['9-16','16-23','23-30','30-37','37-45','45-53','53-67','67-100']; 
-
+                labels = ['<b>Positive Rates <br><br></b>'];
                 for (var i = 0; i < grades.length; i++) {
-                    var grade = grades[i];
-                    labels.push('<i class="circlepadding" style="width: '+Math.max(8,(7-2.2*calcRadius(grade)))+'px;"></i> <i style="background:' + getColorFor(grades[i] + 1) + 'width: '+calcRadius(grade)*2+'px; height: '+calcRadius(grade)*2+'px; border-radius: 50%; margin-top: '+Math.max(0,(9-calcRadius(grade)))+'px;"></i><i class="circlepadding" style="width: '+Math.max(2,(25-2*calcRadius(grade)))+'px;"></i> ' + categories[i]);
+                    labels.push('<i style="background:' + getColorFor(grades[i] + 1) + '; width:' + calcRadius(grades[i] * 2) + 'px; height:' + calcRadius(grades[i] * 2) + 'px; border-radius:' + 50 + '%; " ></i> ' + grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] +   '<br>' : '+')
+                               );
                 }
                 div.innerHTML = labels.join('<br>');
                 return div;
@@ -261,7 +249,8 @@ var minRadius = 20;
                 for (var i = 0; i < grades.length; i++) {
                 div.innerHTML +=
                 '<i style="background:' + getColorFor(grades[i] + 1) + '"></i>' +
-                  grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] +   '<br><br>' : '+');
+                  grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] +   '<br>' : '+'
+                              );
                           }
                           return div;
                       };
@@ -279,18 +268,23 @@ var minRadius = 20;
                     map.on('overlayadd', function(eventLayer){
                       if (eventLayer.name == 'Chropleth Map'){
                         legend.addTo(map);
+                        map.removeControl(cirLegend);
+                        timelineControl.addTimelines(timeline);
+                        map.removeControl(timeline2);
                       }
                       if (eventLayer.name == 'Bubble Map'){
                         cirLegend.addTo(map);
+                        map.removeControl(legend);
+                        timelineControl.addTimelines(timeline2);
+                        map.removeControl(timeline);
                       }
                     });
         
 
             
-            timelineControl.addTo(map);
-            timelineControl.addTimelines(timeline);
-            timelineControl.addTimelines(timeline2);
-      
+        timelineControl.addTo(map);
+        timelineControl.addTimelines(timeline);
+        timelineControl.addTimelines(timeline2);
     </script>
   </body>
 </html>
