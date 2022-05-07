@@ -2,18 +2,18 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Survey Questions</title>
+        <title>WebGIS Final Survey Questions</title>
         <style>
 /* background */
             body {
-                background-color: #003267;
+                background-color: #8B8B8B;
                 font-family: sans-serif!important;
                 text-align: center;
             }
             
     		form {
                 background-color: #fff;
-                max-width: 850px;
+                max-width: 1150px;
                 margin: 50px auto;
                 padding: 30px 20px;
                 box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
@@ -35,39 +35,6 @@
                 line-height: 2;
             }
 /* button */
-            #ok {
-                background-color: #a1aec2;
-                border: 2px solid #777;
-                border-radius: 15px;
-                font-family: inherit;
-                font-size: 21px;
-                display: block;
-                width: 200px;
-                margin: auto;
-                transition-duration: 0.4s;
-            }
-            
-            #exit {
-                background-color: #a1aec2;
-                border: 2px solid #777;
-                border-radius: 15px;
-                font-family: inherit;
-                font-size: 21px;
-                display: block;
-                width: 200px;
-                margin: auto;
-                transition-duration: 0.4s;
-            }
-            
-            #ok:hover, #exit:hover {
-              box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-              background-color: #a1d99b;
-            }
-            #exit:hover {
-              box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-              background-color: #fee0d2;
-            }
-            
     		#next_button, #submit {
                 background-color: #a1aec2;
                 border: 2px solid #777;
@@ -112,13 +79,13 @@
             }
 /* iframe */              
             #iframe {
-                width: 800px;
+                width: 1080px;
                 margin: auto;
             }
 /* main Instruction */
             #main_alert {
                 border: 10px solid #fff;
-                width: 900px;
+                width: 1150px;
                 margin: 0px auto 50px;
             }
             #main_text {
@@ -145,9 +112,9 @@
             <p>
                 1. The survey must be started and completed in a single sitting.<br>
                 2. Please answer each question to the best of your ability. If you are unsure <br>about the correct answer, please make your best guess.<br>
-                3. Please <span style="color: #ff0000; font-weight: bold">ADJUST YOUR SCREEN</span> so that you can see the entire white rectangle.<br>- Once you begin the survey, <span style="color: #ff0000; font-weight: bold">DO NOT CHANGE</span> your screen size.<br>
-                4. Please <span style="color: #ff0000; font-weight: bold">DO NOT HIT</span> the web browser's back or forward buttons.<br>
-                5. Please <span style="color: #ff0000; font-weight: bold">DO NOT REFRESH</span> the web page.<br>
+                3. Please <span style="color: #BA1B1B; font-weight: bold">ADJUST YOUR SCREEN</span> so that you can see the entire white rectangle.<br>- Once you begin the survey, <span style="color: #BA1B1B; font-weight: bold">DO NOT CHANGE</span> your screen size.<br>
+                4. Please <span style="color: #BA1B1B; font-weight: bold">DO NOT HIT</span> the web browser's back or forward buttons.<br>
+                5. Please <span style="color: #BA1B1B; font-weight: bold">DO NOT REFRESH</span> the web page.<br>
             </p>
         <h3>Failure to follow these instructions will result in the loss of all of your answers.</h3>
         </div>
@@ -155,47 +122,29 @@
         <h2 id="sub_text"></h2>
 
 <!-- connect to Google Form -->
-        <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeAV0JvyJihznKSyrMeFeZ7OMo8EoE9cmBdeVtthcs1X4W7_w/formResponse" onkeydown="return event.key != 'Enter';" method="post" id="form">
+        <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdpiTGj8h-tzNLKKJOGEG1StXFYW5mxjbEvT7Anvua0HXfr2g/formResponse" onkeydown="return event.key != 'Enter';" method="post" id="form">
 <!-- main map frame -->
         <iframe id="iframe" src="" title="Iframes"></iframe>
 <!-- questions and Options: name and value should be same as google form-->
 <!--Important!! questions and options(numbers, texts) in Google Form, HTML, CSV must be match-->
-        <div id="questions"></div><br />
+        <div id="questions">Which map style do you think is most aesthetically pleasing?</div><br />
         <div class= "form-control" style="display: none" id="form-control">
             <div id = "q1">
-                <input type="radio" id="radio1_1" name="entry.793294711" value="1. I never use maps if I can avoid them">
+                <input type="radio" id="radio1_1" name="entry.1117382919" value="Choropleth Map">
                             <label id="option1_1"
-                                   for="radio1_1"></label><br />
-                <input type="radio" id="radio1_2" name="entry.793294711" value="2. I use maps less than once a week">
+                                   for="radio1_1">Choropleth Map</label><br />
+                <input type="radio" id="radio1_2" name="entry.1117382919" value="Bubble Map">
                             <label id="option1_2"
-                                   for="radio1_2"></label><br />
-                <input type="radio" id="radio1_3" name="entry.793294711" value="3. I use maps more than once a week but not every day">
-                            <label id="option1_3"
-                                   for="radio1_3"></label><br />
-                <input type="radio" id="radio1_4" name="entry.793294711" value="4. I use maps about once a day">
-                            <label id="option1_4"
-                                   for="radio1_4"></label><br />
-                <input type="radio" id="radio1_5" name="entry.793294711" value="5. I use maps multiple times every day">
-                            <label id="option1_5"
-                                   for="radio1_5"></label><br />
-            </div>
-            
+                                   for="radio1_2">Bubble Map</label><br />
+            </div><br /><br />
+            <div id="questions">Which map style do you think best communicates case rates per population?</div><br />
             <div id = "q2">
-                <input type="radio" id="radio2_1" name="entry.1086824591" value="1. I never looked at maps related to the Covid-19 pandemic">
+                <input type="radio" id="radio2_1" name="entry.945769168" value="Choropleth Map">
                             <label id="option2_1"
-                                   for="radio2_1"></label><br />
-                <input type="radio" id="radio2_2" name="entry.1086824591" value="2. I looked at maps related to the Covid-19 pandemic once a week">
+                                   for="radio2_1">Choropleth Map</label><br />
+                <input type="radio" id="radio2_2" name="entry.945769168" value="Bubble Map">
                             <label id="option2_2"
-                                   for="radio2_2"></label><br />
-                <input type="radio" id="radio2_3" name="entry.1086824591" value="3. I looked at maps related to the Covid-19 pandemic 2 times a week">
-                            <label id="option2_3"
-                                   for="radio2_3"></label><br />
-                <input type="radio" id="radio2_4" name="entry.1086824591" value="4. I looked at maps related to the Covid-19 pandemic 3 times a week">
-                            <label id="option2_4"
-                                   for="radio2_4"></label><br />
-                <input type="radio" id="radio2_5" name="entry.1086824591" value="5. I looked at maps related to the Covid-19 pandemic more than 4 times a week">
-                            <label id="option2_5"
-                                   for="radio2_5"></label><br />
+                                   for="radio2_2">Bubble Map</label><br />
             </div>
         </div>
         <div><h4 id = "warn_next"></h4></div>
@@ -223,7 +172,7 @@
             document.getElementById("questions").style.display='none';  
             document.getElementById("form-control").style.display='none';
             document.getElementById("iframe").style.display='none';
-            document.getElementById('main_text').innerHTML+= "Welcome to the COVIZ survey form";
+            document.getElementById('main_text').innerHTML+= "Welcome to the WebGIS survey form";
             document.getElementById('warning').innerHTML+= "IMPORTANT INSTRUCTIONS";
             document.getElementById('sub_text').innerHTML+= "Click the below button to continue!";
             document.getElementById('next_button_span').innerHTML+= "Begin Survey";           
@@ -237,7 +186,7 @@
             function move_next(){
 // iframe height
                 console.log(pageNum);
-                document.getElementById("iframe").style.height="588px";
+                document.getElementById("iframe").style.height="788px";
 
 // next or submit button
                 if (pageNum == 0){
@@ -266,42 +215,30 @@
             document.getElementById("iframe").style.display='block';
 
 // display iframe
-                document.getElementById("iframe").src=linkToUse;
+                document.getElementById("iframe").src="https://yooki1117.github.io/final/index.html";
                     
 // option for each question
-                if (pageNum == 1) {
-                    document.getElementById("q1").style.display='inline';
-                    var q = document.querySelectorAll("#q2");
-                    for (var x = 0; x < q.length; x++)
-                        q[x].style.display = 'none';
-                    var q = document.querySelectorAll("#radio1_1, #radio1_2, #radio1_3, #radio1_4, #radio1_5");
-                    for (var x = 0; x < q.length; x++)
-                        q[x].style.display = 'inline';
-                    var q = document.querySelectorAll("#option1_1, #option1_2, #option1_3, #option1_4, #option1_5");
-                    for (var x = 0; x < q.length; x++)
-                        q[x].style.display = 'inline';
-                    document.getElementById("option1_1").innerHTML=question_option1;
-                    document.getElementById("option1_2").innerHTML=question_option2;
-                    document.getElementById("option1_3").innerHTML=question_option3;
-                    document.getElementById("option1_4").innerHTML=question_option4;
-                    document.getElementById("option1_5").innerHTML=question_option5;
-                } else if (pageNum == 2) {
-                    document.getElementById("q2").style.display='inline';
-                    var q = document.querySelectorAll("#q1");
-                    for (var x = 0; x < q.length; x++)
-                        q[x].style.display = 'none';
-                    var q = document.querySelectorAll("#radio2_1, #radio2_2, #radio2_3, #radio2_4, #radio2_5");
-                    for (var x = 0; x < q.length; x++)
-                        q[x].style.display = 'inline';
-                    var q = document.querySelectorAll("#option2_1, #option2_2, #option2_3, #option2_4, #option2_5");
-                    for (var x = 0; x < q.length; x++)
-                        q[x].style.display = 'inline';
-                    document.getElementById("option2_1").innerHTML=question_option1;
-                    document.getElementById("option2_2").innerHTML=question_option2;
-                    document.getElementById("option2_3").innerHTML=question_option3;
-                    document.getElementById("option2_4").innerHTML=question_option4;
-                    document.getElementById("option2_5").innerHTML=question_option5;
-                }
+ 
+                document.getElementById("q1").style.display='inline';
+                var q = document.querySelectorAll("#radio1_1, #radio1_2");
+                for (var x = 0; x < q.length; x++)
+                    q[x].style.display = 'inline';
+                var q = document.querySelectorAll("#option1_1, #option1_2");
+                for (var x = 0; x < q.length; x++)
+                    q[x].style.display = 'inline';
+                document.getElementById("option1_1").innerHTML=question_option1;
+                document.getElementById("option1_2").innerHTML=question_option2;
+
+                document.getElementById("q2").style.display='inline';
+                var q = document.querySelectorAll("#radio2_1, #radio2_2");
+                for (var x = 0; x < q.length; x++)
+                    q[x].style.display = 'inline';
+                var q = document.querySelectorAll("#option2_1, #option2_2");
+                for (var x = 0; x < q.length; x++)
+                    q[x].style.display = 'inline';
+                document.getElementById("option2_1").innerHTML=question_option1;
+                document.getElementById("option2_2").innerHTML=question_option2;
+
             }
 // before leaving confirmation prompt
             function submitted(){
