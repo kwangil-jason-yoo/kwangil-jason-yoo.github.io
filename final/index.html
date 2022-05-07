@@ -157,13 +157,14 @@ var minRadius = 20;
             value <= 100 ? '#160b39':
             '#f7f7f7';
         }
-
+                               
         timeline = L.timeline(choropleth, {
             style: function (data) {
-                return {
-                    color: getColorFor((data.properties.New_Positi/data.properties.Total_Numb)*100),
-                    fillOpacity: 1,
-                };
+                    return {
+                        color: getColorFor((data.properties.New_Positi/data.properties.Total_Numb)*100),
+                        fillOpacity: 1,
+                        className:'timeline',
+                    }
             },
             waitToUpdateMap: true,
             onEachFeature: function (feature, layer) {
@@ -183,8 +184,6 @@ var minRadius = 20;
             timeline2 = L.timeline(circle, {
                 getInterval: getInterval,
                 pointToLayer: function (circle, latlng) {
-                    
-                    
                     if (isNaN((circle.properties.New_Positi/circle.properties.Total_Numb)*100)){
                         cirSize = 0
                     } else {
@@ -194,6 +193,7 @@ var minRadius = 20;
                     return L.circleMarker(latlng, {
                         radius: calcRadius(diff),
                         color: getColorFor(cirSize),
+                        className:'timeline2',
                     }).bindPopup('<h3>'+ circle.properties.NAME + '</h3> <p>' + '</strong>Test % Positive: <strong>' + Math.round((circle.properties.New_Positi/circle.properties.Total_Numb)*100) + '% </strong></p>' + 'New Positives: <strong>' + circle.properties.New_Positi + '</strong> <br>Total Number of Tests Performed: <strong>' + circle.properties.Total_Numb + '</strong></p>');
                 },
             });
@@ -219,7 +219,7 @@ var minRadius = 20;
             "Dark": smoothDark
 			};
 	       
-	  L.control.layers(overlays , baseMaps, {collapsed:false}).addTo(map);
+	  L.control.layers(baseMaps, overlays, {collapsed:false}).addTo(map);
         
         map.on("overlayadd", function (eventLayer) {
             timeline.bringToBack();
@@ -263,24 +263,19 @@ var minRadius = 20;
                       }
                       if (eventLayer.name == 'Bubble Map'){
                         map.removeControl(cirLegend);
+
                       }
                     });
                     map.on('overlayadd', function(eventLayer){
                       if (eventLayer.name == 'Chropleth Map'){
                         legend.addTo(map);
-                        map.removeControl(cirLegend);
-                        timelineControl.addTimelines(timeline);
-                        map.removeControl(timeline2);
+                        timeline2.bringToBack();
                       }
                       if (eventLayer.name == 'Bubble Map'){
                         cirLegend.addTo(map);
-                        map.removeControl(legend);
-                        timelineControl.addTimelines(timeline2);
-                        map.removeControl(timeline);
+                        timeline.bringToBack();
                       }
                     });
-        
-
             
         timelineControl.addTo(map);
         timelineControl.addTimelines(timeline);
